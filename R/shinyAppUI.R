@@ -3,19 +3,22 @@
 #' @importFrom graphics hist
 #' @import shiny
 
-# library(shiny)
-# library(shinyWidgets)
-# library(dslabs)
-# library(tidyverse)
-# library(scales)
-# library(ggplot2)
+ library(shiny)
+ library(shinyWidgets)
+ library(dslabs)
+ library(tidyverse)
+ library(tidyr)
+ library(dplyr)
+ 
+ library(scales)
+ library(ggplot2)
 
 covid <- readRDS(url("https://github.com/UMAD-FCS/COVID19UY/raw/master/data-raw/data_test_2020-08-04.rds"))
 
 covid <- covid %>%
   filter(continent=="South America") %>%
-  pivot_longer(cols = c(total_cases, total_cases_per_million,total_deaths_per_million,total_tests_per_thousand),
-               names_to = "data", values_to = "value")
+  gather("data","value",total_cases, total_cases_per_million,total_deaths_per_million,total_tests_per_thousand)
+         
 
 # create the shiny application user interface
 
