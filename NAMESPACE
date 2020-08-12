@@ -2,4 +2,10 @@
 
 export(launchApp)
 import(shiny)
-importFrom(graphics,hist)
+import(shinyWidgets)
+import(dslabs)
+import(dplyr)
+import(scales)
+import(ggplot2)
+#importFrom(graphics,hist)
+
