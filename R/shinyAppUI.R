@@ -2,16 +2,15 @@
 #'
 #' @importFrom graphics hist
 #' @import shiny
-
- library(shiny)
- library(shinyWidgets)
- library(dslabs)
- library(tidyverse)
- library(tidyr)
- library(dplyr)
- 
- library(scales)
- library(ggplot2)
+# 
+#  library(shiny)
+#  library(shinyWidgets)
+#  library(dslabs)
+#  library(tidyverse)
+#  library(tidyr)
+#  library(dplyr)
+#  library(scales)
+#  library(ggplot2)
 
 covid <- readRDS(url("https://github.com/UMAD-FCS/COVID19UY/raw/master/data-raw/data_test_2020-08-04.rds"))
 
