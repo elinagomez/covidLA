@@ -3,12 +3,12 @@
 #' @importFrom graphics hist
 #' @import shiny
 
-library(shiny)
-library(shinyWidgets)
-library(dslabs)
-library(tidyverse)
-library(scales)
-library(ggplot2)
+# library(shiny)
+# library(shinyWidgets)
+# library(dslabs)
+# library(tidyverse)
+# library(scales)
+# library(ggplot2)
 
 covid <- readRDS(url("https://github.com/UMAD-FCS/COVID19UY/raw/master/data-raw/data_test_2020-08-04.rds"))
 
@@ -21,17 +21,17 @@ covid <- covid %>%
 
    shinyAppUI <- fluidPage(
 
-    titlePanel("Evolución COVID 19 - América Latina"),
+    titlePanel("EvoluciÃ³n COVID 19 - AmÃ©rica Latina"),
     sidebarLayout(
       sidebarPanel(
         # inputs
-        checkboxGroupInput("location", "País",
+        checkboxGroupInput("location", "Pa?s",
                            choices = unique(covid$location),
                            selected="Uruguay"),
         dateRangeInput("date", strong("Rango de fechas"), start = "2019-12-31", end = "2020-08-03",
                        min = "2019-12-31", max = "2020-08-03"),
         radioGroupButtons("dataInput", "Indicador",
-                          choiceNames = list("Total de casos", "Total de casos por millón","Total de muertes por millón","Total de tests por miles"),
+                          choiceNames = list("Total de casos", "Total de casos por millÃ³n","Total de muertes por millÃ³n","Total de tests por miles"),
                           choiceValues = list("total_cases", "total_cases_per_million","total_deaths_per_million","total_tests_per_thousand"))
       ),
 
