@@ -24,7 +24,7 @@ shinyAppServer <- function(input, output) {
       scale_x_datetime(labels = date_format("%b-%Y"))+
       xlab("Fecha") +
       ylab("Total") +
-      ggtitle(paste("Evolución de",input$dataInput))
+      ggtitle(paste("EvoluciÃ³n de",input$dataInput))
 
 
   })
@@ -38,8 +38,8 @@ shinyAppServer <- function(input, output) {
       group_by(location,data) %>%
       select(date,value) %>%
       mutate(data = ifelse(data == "total_cases", "Total de casos",
-                           ifelse(data == "total_cases_per_million", "Total de casos por millón",
-                                  ifelse(data == "total_deaths_per_million", "Total de muertes por millón",
+                           ifelse(data == "total_cases_per_million", "Total de casos por millÃ³n",
+                                  ifelse(data == "total_deaths_per_million", "Total de muertes por millÃ³n",
                                          ifelse(data == "total_tests_per_thousand", "Total de tests por miles", "total_tests_per_thousand")))))%>%
       rename(Pais = location, Indicador=data, Fecha=date, Valor=value)%>%
       knitr::kable("html")%>%
