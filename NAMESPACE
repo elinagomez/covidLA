@@ -8,6 +8,9 @@ import(dplyr)
 import(scales)
 import(ggplot2)
 import(tidyr)
+import(tidyverse)
+import(rlang)
+
 
 #importFrom(graphics,hist)
 
