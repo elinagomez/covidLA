@@ -1,15 +1,10 @@
 Package: covidLA
 Type: Package
-Title: Implements a demo shiny application inside a package
+Title: COVID19 América Latina
 Version: 0.1.0
-Author: Mark Sellors
-Maintainer: Mark Sellos <msellors@mango-solutions.com>
-Description: A small package that implements the 'geyser' shiny app inside a 
-    package.
-    The geyser shiny app is the small app provided by the RStudio IDE when you
-    click to create a new "Shiny Web App...".
-    In this package that shiny app has been broken up into parts as a
-    demonstration of how one might approach the packaging of such an app.
+Author: Elina Gómez
+Maintainer: Elina Gómez <elinagomezbonaglia@gmail.com>
+Description: Aplicación sobre evolución cmparativa de los casos asociados a la pandemia por COVID 19 en América Latina, para el llamado 011/20 de Facultad de Ciencias Sociales (UdelaR- Uruguay).   
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
