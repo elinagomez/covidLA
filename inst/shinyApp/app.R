@@ -1,1 +1,1 @@
-shinyAppDemo::launchApp()
+covidLA::launchApp()
