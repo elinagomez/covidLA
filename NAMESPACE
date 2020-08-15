@@ -10,4 +10,4 @@ import(ggplot2)
 import(tidyr)
 import(tidyverse)
 import(rlang)
-
+import(devtools)

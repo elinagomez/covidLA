@@ -12,9 +12,7 @@
  # library(scales)
  # library(ggplot2)
 
-#covid <- readRDS(url("https://github.com/UMAD-FCS/COVID19UY/raw/master/data-raw/data_test_2020-08-04.rds"))
-
-#load("data/data_set_2020-08-04.Rdata")
+data("covid")
 
   covid <- covid %>%
   filter(continent=="South America") %>%
