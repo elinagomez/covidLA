@@ -1,16 +1,7 @@
 #' Shiny app server object
 #'
-#' @importFrom graphics hist
 #' @import shiny
 # 
- # library(shiny)
- # library(shinyWidgets)
- # library(dslabs)
- # library(tidyverse)
- # library(tidyr)
- # library(dplyr)
- # library(scales)
- # library(ggplot2)
 
 data("covid")
 
@@ -20,9 +11,6 @@ data("covid")
   gather("data","value","Total de casos","Total de casos por millón","Total de muertes por millón","Total de tests por miles")
 
 
-
-
-# create the shiny application user interface
 
    shinyAppUI <- fluidPage(
 
